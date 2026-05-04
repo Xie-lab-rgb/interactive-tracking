@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tracking Lab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="app">
+    <div id="loading">
+      <div class="spinner"></div>
+      <p id="loading-text">Initializing camera &amp; models…</p>
+    </div>
+    <div id="viewport">
+      <video id="video" playsinline></video>
+      <canvas id="overlay"></canvas>
+      <canvas id="three-canvas"></canvas>
+    </div>
+    <div id="panel"></div>
+    <div id="debug-wrap">
+      <button id="debug-toggle" type="button" title="Toggle Debug Console">🐛</button>
+      <div id="debug-panel" class="closed">
+        <div class="debug-header">Debug Console</div>
+        <div class="debug-section">
+          <div class="debug-label">Gestures</div>
+          <div id="debug-gestures" class="debug-gestures"></div>
+        </div>
+        <div class="debug-section">
+          <div class="debug-label">FPS</div>
+          <div id="debug-fps" class="debug-fps">—</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
